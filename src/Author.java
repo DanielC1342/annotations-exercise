@@ -9,16 +9,16 @@ public class Author extends Person {
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList();
+        books = new ArrayList<String>();
     }
 
     /**
      * @deprecated Use publishedBooks instead
      */
-    @Deprecated
-    public List<String> getBooks() {
-        return books;
-    }
+//    @Deprecated
+//    public List<String> getBooks() {
+//        return books;
+//    }
 
     public List<String> publishedBooks() {
         return books;
@@ -28,8 +28,7 @@ public class Author extends Person {
         books.add(book);
     }
 
-    @Override
-    public String sortName() {
+    public String fullName() {
         return String.format("%s, %s", lastName, firstName);
     }
 }
